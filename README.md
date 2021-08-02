@@ -66,3 +66,19 @@ rosrun teleop_twist_keyboard teleop_twist_keyboard.py _key_timeout:=0.6
 ```
 
 It is recommended that you set `key_timeout` higher than the initial key repeat delay on your system (This delay is 0.5 seconds by default on Ubuntu, but can be adjusted).
+
+# Customize for Jetbot
+
+Customized origin code.
+
+Code for running jetbot motor is [here](https://github.com/msjun23/jetbot_ros/blob/master/scripts/jetbot_motors.py). This code is must be launched at your jetbot!
+
+```
+# At your master PC
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+
+# At your jetbot
+rosrun jetbot_ros jetbot_motors.py
+```
+
+Now you can control your jetbot using PC keyboard!
