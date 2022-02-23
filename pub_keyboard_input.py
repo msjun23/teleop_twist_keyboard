@@ -39,10 +39,13 @@ if __name__=="__main__":
         while(1):
             key = getKey(key_timeout)
             
+            # Get keyboard input
             if (key == ''):
                 continue
+            # ^C -> quit
             elif (key == '\x03'):
                 break
+            # Enter input -> Publish string
             elif (key == '\r'):
                 publisher.publish(pub_str)
                 pub_str = ''
